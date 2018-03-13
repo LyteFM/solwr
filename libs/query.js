@@ -97,6 +97,12 @@ Query.prototype.limit = function ( val ) {
   return this;
 };
 
+Query.prototype.fieldList = function ( val ) {
+  this.$url += "&fl=" + val;
+
+  return this;
+};
+
 Query.prototype.remove = function ( callback ) {
   this.$url       = this.urlPrefix.core + "update?commit=true&stream.body=<delete><query>" + this.conditions + "</query></delete>";
   this.__method__ = "GET";
