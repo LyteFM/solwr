@@ -8,7 +8,7 @@ function Solwr () {
 
 Solwr.prototype.address = function ( opts ) {
   if ( !opts.host ) e( e.type.WRONG_HOST );
-  if ( !opts.port ) e( e.type.WRONG_PORT );
+  //if ( !opts.port ) e( e.type.WRONG_PORT );
 
   this.host = opts.host;
   this.port = opts.port;

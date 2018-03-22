@@ -7,7 +7,10 @@ function Query ( conditions, opts, core ) {
 
   this.opts.format = this.opts.format || this.core.__format;
 
-  var urlBase = __solwr__.host + ":" + __solwr__.port;
+  var urlBase = __solwr__.host;
+  if(__solwr__.port){
+    urlBase + ":" + __solwr__.port;
+  }
 
   this.urlPrefix = {
     admin: urlBase + "/solr/admin/",
